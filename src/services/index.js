@@ -3,9 +3,4 @@
 import DwhApi from './dwhapi/dwhapi.js';
 import Urm from './urm/urm.js';
 
-const Services = {
-    DwhApi: DwhApi,
-    Urm: Urm
-};
-
-export default Services;
+export default {DwhApi, Urm};

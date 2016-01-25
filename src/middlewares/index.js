@@ -1,7 +1,3 @@
 'use strict';
 
-const Middlewares = {
-
-};
-
-export default Middlewares;
+export default {};
