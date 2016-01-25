@@ -1,5 +1,4 @@
 'use strict';
 
-require('babel-register');
-const Lib = require('./lib/index.js');
+const Lib = require('./dist/index.js');
 module.exports = Lib;

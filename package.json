@@ -4,6 +4,7 @@
     "description": "gfk-e middleware utilities etc.",
     "main": "index.js",
     "scripts": {
+        "build": "node_modules/.bin/babel --babelrc .babelrc src --out-dir dist",
         "test": "node_modules/.bin/mocha"
     },
     "repository": {
@@ -19,6 +20,7 @@
         "node": "5.2.0"
     },
     "devDependencies": {
+        "babel-cli": "^6.1.1",
         "co-mocha": "^1.1.2",
         "mocha": "^2.3.4",
         "mockery": "^1.4.0",

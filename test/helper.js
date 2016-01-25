@@ -5,7 +5,7 @@ import {contains, isEmpty} from 'lodash';
 import nock from 'nock';
 import mockery from 'mockery';
 
-import Lib from '..';
+import Lib from '../src/index.js';
 
 
 //If there is something wrong with the compiled code e.g. if you compile while having syntax error
