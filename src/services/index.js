@@ -1,6 +1,4 @@
 'use strict';
 
-import DwhApi from './dwhapi/dwhapi.js';
-import Urm from './urm/urm.js';
-
-export default {DwhApi, Urm};
+export {default as DwhApi} from './dwhapi/dwhapi.js';
+export {default as Urm} from './urm/urm.js';

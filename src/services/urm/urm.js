@@ -1,7 +1,5 @@
 'use strict';
 
-import BaseUrmFacade from './BaseUrmFacade.js';
-import AuthorizationFacade from './AuthorizationFacade.js';
-import UserSettingsFacade from './UserSettingsFacade.js';
-
-export default {BaseUrmFacade, AuthorizationFacade, UserSettingsFacade};
+export {default as BaseUrmFacade} from './BaseUrmFacade.js';
+export {default as AuthorizationFacade} from './AuthorizationFacade.js';
+export {default as UserSettingsFacade} from './UserSettingsFacade.js';
