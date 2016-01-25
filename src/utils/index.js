@@ -1,3 +1,5 @@
 'use strict';
 
-export {default as Logger} from './logger.js';
+import Logger from './logger.js';
+
+export default {Logger};

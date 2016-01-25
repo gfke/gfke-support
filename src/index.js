@@ -1,5 +1,7 @@
 'use strict';
 
-export {default as Middlewares} from './middlewares/index.js';
-export {default as Services} from './services/index.js';
-export {default as Utils} from './utils/index.js';
+import Middlewares from './middlewares/index.js';
+import Services from './services/index.js';
+import Utils from './utils/index.js';
+
+export default {Middlewares, Services, Utils};
