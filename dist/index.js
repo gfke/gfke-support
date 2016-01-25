@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _index = require('./middlewares/index.js');
@@ -18,10 +18,4 @@ var _index6 = _interopRequireDefault(_index5);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const Lib = {
-    Middlewares: _index2.default,
-    Services: _index4.default,
-    Utils: _index6.default
-};
-
-exports.default = Lib;
+exports.default = { Middlewares: _index2.default, Services: _index4.default, Utils: _index6.default };
