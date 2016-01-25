@@ -1,4 +1,4 @@
 'use strict';
 
 const Lib = require('./dist/index.js');
-module.exports = Lib;
+exports.default = module.exports = Lib.default;
