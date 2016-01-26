@@ -1,5 +1,12 @@
 'use strict';
 
+describe("GFKE Support services", function() {
+    context("dwhApi", function() {
+        it('not implemented yet');
+    });
+});
+
+
 // import nock from 'nock';
 //
 // const {DwhApi} = global.Lib.Services;

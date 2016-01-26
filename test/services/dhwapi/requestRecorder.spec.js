@@ -1,9 +1,7 @@
 'use strict';
 
-// import nock from 'nock';
-//
-// describe.skip("Services: DWhAPI", function() {
-//     context("RequestRecorder", function() {
-//         it("not implemented yet");
-//     });
-// });
+describe("GFKE Support services dwhApi", function() {
+    context("requestRecorder", function() {
+        it('not implemented yet');
+    });
+});

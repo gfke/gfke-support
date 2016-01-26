@@ -44,8 +44,8 @@ describe("GFKE Support", function() {
     context("services", function() {
         const services = require('../services');
 
-        it("should have property dwhApiFacade", function() {
-            services.should.have.a.property("dwhApiFacade");
+        it("should have property dwhApi", function() {
+            services.should.have.a.property("dwhApi");
         });
 
         it("should have property monitoring", function() {
