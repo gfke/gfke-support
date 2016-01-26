@@ -2,7 +2,7 @@
 
 import nock from 'nock';
 
-const DwhApi = global.Lib.Services.DwhApi;
+const {DwhApi} = global.Lib.Services;
 
 describe('Services: DwhApi', function() {
 

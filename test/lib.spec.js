@@ -3,5 +3,5 @@
 const Lib = global.Lib;
 
 describe("Lib", function() {
-    it("should");
+    it("not implemented yet");
 });

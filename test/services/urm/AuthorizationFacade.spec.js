@@ -2,6 +2,6 @@
 
 describe("Services: URM", function() {
     context("UserSettingsFacade", function() {
-        it('should');
+        it('not implemented yet');
     });
 });
