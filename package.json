@@ -1,10 +1,9 @@
 {
-  "name": "node-module-middleware",
-  "version": "0.1.0",
-  "description": "gfk-e middleware utilities etc.",
-  "main": "./lib/index.js",
+  "name": "gfke-support",
+  "version": "0.2.0",
+  "description": "gfk-e support with utilities, services and middlewares etc.",
+  "main": "index.js",
   "scripts": {
-    "build": "node_modules/.bin/babel --babelrc .babelrc src --out-dir lib",
     "test": "node_modules/.bin/mocha"
   },
   "repository": {
@@ -17,10 +16,9 @@
   },
   "homepage": "https://github.com/gfke/node-module-middleware",
   "engines": {
-    "node": "5.2.0"
+    "node": ">=4.2"
   },
   "devDependencies": {
-    "babel-cli": "^6.1.1",
     "co-mocha": "^1.1.2",
     "mocha": "^2.3.4",
     "mockery": "^1.4.0",
@@ -29,8 +27,6 @@
     "source-map-support": "^0.3.3"
   },
   "dependencies": {
-    "babel-preset-es2015-node5": "^1.0.0",
-    "babel-register": "^6.3.13",
     "bluebird": "^3.0.5",
     "bunyan": "^1.5.1",
     "bunyan-prettystream": "^0.1.3",
