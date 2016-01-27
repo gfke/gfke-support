@@ -1,5 +1,5 @@
 # 0.2.0
-Support given for node >=4.2.
+Support given for node >=5.2.
 
 * module name changed: ``` gfke-support ```
 * changed all property names to lowercased camelCase.
