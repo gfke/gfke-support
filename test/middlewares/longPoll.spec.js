@@ -1,7 +1,7 @@
 'use strict';
 
-// const {LongPoll} = global.Lib.Middlewares.LongPoll;
-//
-// describe("Middlewares: LongPoll", function() {
-//     it("not implemented yet");
-// });
+const {longPoll} = global.lib.middlewares;
+
+describe("GFKE Support middlewares longPoll", function() {
+    it("spec not implemented yet");
+});

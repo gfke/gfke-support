@@ -1,7 +1,7 @@
 'use strict';
 
-describe("GFKE Support utils", function() {
-    context("cache", function() {
-        it('not implemented yet');
-    });
+const {cache} = global.lib.utils;
+
+describe("GFKE Support utils cache", function() {
+    it("spec not implemented yet");
 });

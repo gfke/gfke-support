@@ -1,7 +1,4 @@
 # 0.2.0
-
-to be static and support easy coverage - rewritten for es6.
-
 Support given for node >=4.2.
 
 * module name changed: ``` gfke-support ```
@@ -46,12 +43,12 @@ easy with destructuring:
 ```JavaScript
 // es6 babel 6
 import {logger} from 'gfke-support/utils';
-import {dwhApiFacade} from 'gfke-support/services'; // is Class
+import {dwhApi} from 'gfke-support/services'; // is Class
 import {runAfter} from 'gfke-support/middlewares';
 
 // es6 pure with enabled es6 feature (e.g. --harmony_destructuring)
 const {logger} = require('gfke-support/utils');
-const {dwhApiFacade} = require('gfke-support/services'); // is Class
+const {dwhApi} = require('gfke-support/services'); // is Class
 const {runAfter} = require('gfke-support/middlewares');
 ```
 # 0.1.0

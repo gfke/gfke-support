@@ -1,67 +1,76 @@
 'use strict';
 
-describe("GFKE Support", function() {
-    context("lib", function() {
-        const lib = require('..');
+import lib from '..';
+import middlewares from '../middlewares.js';
+import services from '../services.js';
+import utils from '../utils.js';
 
-        it("should have property middlewares", function() {
-            lib.should.have.a.property("middlewares");
-        });
-
-        it("should have property services", function() {
-            lib.should.have.a.property("services");
-        });
-
-        it("should have property utils", function() {
-            lib.should.have.a.property("utils");
-        });
+describe("GFKE Support", () => {
+  context("lib", () => {
+    it("should have property middlewares", () => {
+      lib.should.have.a.property("middlewares");
     });
 
-    context("middlewares", function() {
-        const middlewares = require('../middlewares');
-
-        it("should have property logger", function() {
-            middlewares.should.have.a.property("logger");
-        });
-
-        it("should have property longPoll", function() {
-            middlewares.should.have.a.property("longPoll");
-        });
-
-        it("should have property runAfter", function() {
-            middlewares.should.have.a.property("runAfter");
-        });
-
-        it("should have property sharedSecret", function() {
-            middlewares.should.have.a.property("sharedSecret");
-        });
-
-        it("should have property tokenDecorator", function() {
-            middlewares.should.have.a.property("tokenDecorator");
-        });
+    it("should have property services", () => {
+      lib.should.have.a.property("services");
     });
 
-    context("services", function() {
-        const services = require('../services');
+    it("should have property utils", () => {
+      lib.should.have.a.property("utils");
+    });
+  });
 
-        it("should have property dwhApi", function() {
-            services.should.have.a.property("dwhApi");
-        });
-
-        it("should have property monitoring", function() {
-            services.should.have.a.property("monitoring");
-        });
-
-        it("should have property urm", function() {
-            services.should.have.a.property("urm");
-        });
+  context("middlewares", () => {
+    it("should have property logger", () => {
+      middlewares.should.have.a.property("logger");
     });
 
-    context("utils", function() {
-        const utils = require('../utils');
-
-        it("should have property logger", function() {
-            utils.should.have.a.property("logger");
-        });
+    it("should have property longPoll", () => {
+      middlewares.should.have.a.property("longPoll");
     });
+
+    it("should have property runAfter", () => {
+      middlewares.should.have.a.property("runAfter");
+    });
+
+    it("should have property sharedSecret", () => {
+      middlewares.should.have.a.property("sharedSecret");
+    });
+
+    it("should have property tokenDecorator", () => {
+      middlewares.should.have.a.property("tokenDecorator");
+    });
+  });
+
+  context("services", () => {
+    it("should have property dwhApi", () => {
+      services.should.have.a.property("dwhApi");
+    });
+
+    it("should have property monitoring", () => {
+      services.should.have.a.property("monitoring");
+    });
+
+    it("should have property urm", () => {
+      services.should.have.a.property("urm");
+    });
+  });
+
+  context("utils", () => {
+    it("should have property cache", () => {
+      utils.should.have.a.property("cache");
+    });
+
+    it("should have property logger", () => {
+      utils.should.have.a.property("logger");
+    });
+
+    it("should have property removeLine", () => {
+      utils.should.have.a.property("removeLine");
+    });
+
+    it("should have property socket", () => {
+      utils.should.have.a.property("socket");
+    });
+  });
 });

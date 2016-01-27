@@ -4,15 +4,15 @@ import _ from 'lodash';
 import Promise from 'bluebird';
 import requestPromise from 'request-promise';
 
-import {SocketError, default as socket} from './utils/socket.js';
+import {SocketError, default as Socket} from '../../utils';
 import HttpError from 'http-errors';
 
-import log from '../../utils/logger.js';
+import {logger} from '../../utils';
 
 // FIXME: UNUSED IMPORT
 import socketClient from 'socket.io-client';
 import co from 'co';
-import cache from './utils/cache.js';
+import {cache} from '../../utils';
 
 /**
  * Maximum time between emitting event to URM and expecting answer event handler call
@@ -38,6 +38,7 @@ export default class BaseUrmFacade {
         this.urmBaseUrl = process.env.urmBaseUrl;
         this.urmBaseEvent = process.env.urmBaseEvent;
         this._token = token;
+        this.socket = Socket(process.env.urmSocketUrl);
     }
 
     get baseEvent() {
@@ -118,13 +119,13 @@ export default class BaseUrmFacade {
         const stack = new Error().stack;
         event = this.urmBaseEvent + this.baseEvent + event;
 
-        log.debug('Emit WebSocket event', event, data);
+        logger.debug('Emit WebSocket event', event, data);
 
-        socket.emit(event, this.appendTokenTo(data));
+        this.socket.emit(event, this.appendTokenTo(data));
 
         return new Promise((resolve, reject) => {
             //TODO: Check if this might lead to memory leak as a new handler is registered each time this is called
-            socket.on(event, (data) => {
+            this.socket.on(event, (data) => {
                 try {
                     if (data.status) {
                         resolve(transformFn.call(null, data));

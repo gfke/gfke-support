@@ -3,7 +3,7 @@
 import BaseUrmFacade from './BaseUrmFacade.js';
 
 // FIXME: UNUSED IMPORT
-import cache from './utils/cache.js';
+import {cache} from '../../utils';
 
 /**
  * Facade for the authorization aspect of the URM service

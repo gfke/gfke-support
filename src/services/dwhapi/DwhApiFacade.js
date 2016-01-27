@@ -5,7 +5,6 @@ import requestPromise from 'request-promise';
 import HttpError from 'http-errors';
 import _ from 'lodash';
 
-import log from '../../utils/logger.js';
 import requestRecorder from './requestRecorder.js';
 
 const urmTokenHeader = 'x-mx-reqtoken';

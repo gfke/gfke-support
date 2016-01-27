@@ -1,7 +1,7 @@
 'use strict';
 
-describe("GFKE Support utils", function() {
-    context("socket", function() {
-        it('not implemented yet');
-    });
+const {socket} = global.lib.utils;
+
+describe("GFKE Support utils socket", function() {
+    it("spec not implemented yet");
 });

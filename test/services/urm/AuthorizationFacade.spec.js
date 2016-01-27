@@ -1,7 +1,7 @@
 'use strict';
 
-describe("GFKE Support services urm", function() {
-    context("AuthorizationFacade", function() {
-        it('not implemented yet');
-    });
+const {AuthorizationFacade} = global.lib.services.urm;
+
+describe("GFKE Support services urm AuthorizationFacade", function() {
+    it("spec not implemented yet");
 });

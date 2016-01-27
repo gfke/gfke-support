@@ -1,7 +1,7 @@
 'use strict';
 
 // Library
-const services = require("./").services;
+const services = require("./lib/services");
 
 // Export
-module.exports = services;
+module.exports = services.default;

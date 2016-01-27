@@ -4,7 +4,7 @@ import BaseUrmFacade from './BaseUrmFacade.js';
 
 // FIXME: UNUSED IMPORT
 import socketClient from 'socket.io-client';
-import cache from './utils/cache.js';
+import {cache} from '../../utils';
 import co from 'co';
 
 /**

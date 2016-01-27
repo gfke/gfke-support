@@ -1,9 +1,11 @@
 'use strict';
 
-import {Logger} from '../utils/index.js';
+import utils from '../utils';
 import BunyanMiddleware from 'koa-bunyan-logger';
 
-exports.setupLog = BunyanMiddleware(Logger);
+const Logger = utils.logger();
+
+exports.logger = BunyanMiddleware(Logger);
 exports.requestLogger = BunyanMiddleware.requestLogger({
     //Add token to each logged request
     updateLogFields: function (fields) {

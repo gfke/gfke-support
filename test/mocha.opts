@@ -2,6 +2,8 @@
 --reporter list
 --recursive
 --colors
+--compilers js:babel-register
 --require should
 --require co-mocha
+--require test/env.js
 --require test/helper.js

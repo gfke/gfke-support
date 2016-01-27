@@ -2,8 +2,9 @@
 
 import _ from 'lodash';
 import co from 'co';
+import utils from '../utils';
 
-import {Logger} from '../utils/index.js';
+const Logger = utils.logger();
 
 /**
  * This middle ware enables execution of arbitrary code

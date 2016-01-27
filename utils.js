@@ -1,7 +1,7 @@
 'use strict';
 
 // Library
-const utils = require("./").utils;
+const utils = require("./lib/utils");
 
 // Export
-module.exports = utils;
+module.exports = utils.default;

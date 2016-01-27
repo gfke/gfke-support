@@ -1,7 +1,7 @@
 'use strict';
 
 // Library
-const middlewares = require("./").middlewares;
+const middlewares = require("./lib/middlewares");
 
 // Export
-module.exports = middlewares;
+module.exports = middlewares.default;

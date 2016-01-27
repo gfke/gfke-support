@@ -1,16 +1,9 @@
 'use strict';
 
+import _ from 'lodash';
 import socketClient from 'socket.io-client';
-import log from '../../../utils/logger.js';
-
-/**
- * Remove topmost line from text
- * @param {string} text
- * @returns {string}
- */
-function removeLine(text) {
-    return text.substring(text.indexOf('\n') + 1);
-}
+import logger from './logger.js';
+import removeLine from './removeLine.js'
 
 /**
  * Error used to signal that some error happened during a Socket event
@@ -39,23 +32,25 @@ export class SocketError extends Error {
     }
 }
 
-/**
- * Create a Socket instance and connect it to the URM socket server
- */
-const _socket = socketClient(process.env.urmSocketUrl, {
-    transports: ['websocket'],
-    reconnection: true,
-    // Retry every 20 sec. Protects the log from beeing hammered with errors
-    reconnectionDelay: 20000
-});
+export default function(url, opts={}) {
+    /**
+     * Create a Socket instance and connect it to the URM socket server
+     */
+    const _socket = socketClient(url, _.merge({
+        transports: ['websocket'],
+        reconnection: true,
+        // Retry every 20 sec. Protects the log from beeing hammered with errors
+        reconnectionDelay: 20000
+    }, opts));
 
-_socket.on('connect', () => {
-    log.info('Socket: Connection established');
-});
+    _socket.on('connect', () => {
+        log.info('Socket: Connection established');
+    });
 
-_socket.on('connect_error', (error) => {
-    //Log silent. Throwing an error would terminate the process instead of trying to reconnect
-    log.error('Socket: An error occurred while connecting to %s. %s', process.env.urmSocketUrl, error, error.stack);
-});
+    _socket.on('connect_error', (error) => {
+        //Log silent. Throwing an error would terminate the process instead of trying to reconnect
+        logger.error('Socket: An error occurred while connecting to %s. %s', process.env.urmSocketUrl, error, error.stack);
+    });
 
-export default _socket;
+    return _socket;
+}

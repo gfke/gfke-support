@@ -1,7 +1,7 @@
 'use strict';
 
-describe("GFKE Support services urm", function() {
-    context("UserSettingsFacade", function() {
-        it('not implemented yet');
-    });
+const {UserSettingsFacade} = global.lib.services.urm;
+
+describe("GFKE Support services urm UserSettingsFacade", function() {
+    it("spec not implemented yet");
 });

@@ -1,7 +1,7 @@
 'use strict';
 
-// const Logger = global.Lib.Middlewares.Logger;
-//
-// describe("Middlewares: Logger", function() {
-//     it("not implemented yet");
-// });
+const {measureExecutionTime} = global.lib.middlewares;
+
+describe("GFKE Support middlewares measureExecutionTime", function() {
+    it("spec not implemented yet");
+});

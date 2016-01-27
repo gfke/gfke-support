@@ -1,7 +1,7 @@
 'use strict';
 
-// const {RunAfter} = global.Lib.Middlewares;
-//
-// describe("Middlewares: RunAfter", function() {
-//     it("not implemented yet");
-// });
+const {runAfter} = global.lib.middlewares;
+
+describe("GFKE Support middlewares runAfter", function() {
+    it("spec not implemented yet");
+});

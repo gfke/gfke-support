@@ -1,5 +1,14 @@
 'use strict';
 
-import Logger from './logger.js';
+import cache from './cache.js';
+import logger from './logger.js';
+import removeLine from './removeLine.js';
+import {SocketError, default as socket} from './socket.js';
 
-export default {Logger};
+export default {
+    cache,
+    logger,
+    removeLine,
+    socket,
+    SocketError
+};

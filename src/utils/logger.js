@@ -33,4 +33,6 @@ if (process.env.NODE_ENV === 'test' && _.isUndefined(process.env.silence_logger)
     ];
 }
 
-export default bunyan.createLogger(logOptions);
+export default function(opts={}) {
+    return bunyan.createLogger(_.merge({}, logOptions, opts));
+};

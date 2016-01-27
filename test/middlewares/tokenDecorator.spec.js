@@ -1,7 +1,7 @@
 'use strict';
 
-// const {TokenDecorator} = global.Lib.Middlewares;
-//
-// describe("Middlewares: TokenDecorator", function() {
-//     it("not implemented yet");
-// });
+const {tokenDecorator} = global.lib.middlewares;
+
+describe("GFKE Support middlewares tokenDecorator", function() {
+    it("spec not implemented yet");
+});
