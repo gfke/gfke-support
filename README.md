@@ -5,7 +5,7 @@ RepoName still ``` node-module-middleware ```...
 ## Installation
 
 ```Shell
-$ npm i --save gfke/node-module-middleware
+$ npm i --save gfke/node-module-middleware@0.2.0
 ```
 
 ## Usage
