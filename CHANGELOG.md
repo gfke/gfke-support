@@ -1,4 +1,8 @@
-# 0.2.0
+# v0.3.0
+
+module name: ``` node-module-middleware ```
+
+# ~~0.2.0~~
 Support given for node >=5.2.
 
 * module name changed: ``` gfke-support ```
@@ -51,6 +55,7 @@ const {logger} = require('gfke-support/utils');
 const {dwhApi} = require('gfke-support/services'); // is Class
 const {runAfter} = require('gfke-support/middlewares');
 ```
+
 # 0.1.0
 
 Written with babel6 for es2015.

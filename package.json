@@ -1,5 +1,5 @@
 {
-  "name": "gfke-support",
+  "name": "node-module-middleware",
   "version": "0.2.0",
   "description": "gfk-e support with utilities, services and middlewares etc.",
   "main": "index.js",
