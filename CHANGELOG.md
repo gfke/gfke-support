@@ -9,7 +9,7 @@ Support given for node >=5.2.
     * dwhapi
     * urm
     * monitoring
-    * koa
+    * ~~koa~~
 * middlewares:
     * all from ``` 0.1.0 ```
     * sharedSecret
