@@ -1,0 +1,58 @@
+{
+  "name": "gfke-support",
+  "version": "0.1.0",
+  "description": "Collection of services and utils for gfke applications",
+  "main": "lib/index.js",
+  "author": {
+    "name": "GFK Entertainment",
+    "email": "contact.entertainment@gfk.com",
+    "url": "http://www.gfk-entertainment.com/"
+  },
+  "license": "WTFPL",
+  "engines": {
+    "node": ">=4.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gfke/gfke-support.git"
+  },
+  "homepage": "https://github.com/gfke/gfke-support",
+  "bugs": "https://github.com/gfke/gfke-support/issues",
+  "scripts": {
+    "test": "node_modules/.bin/mocha test",
+    "test:cov": "node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha test"
+  },
+  "devDependencies": {
+    "co-mocha": "^1.1.2",
+    "co-supertest": "0.0.10",
+    "dotenv": "2.0.0",
+    "istanbul": "^0.4.2",
+    "koa": "1.1.2",
+    "koa-better-body": "1.0.17",
+    "koa-router": "5.4.0",
+    "mocha": "^2.3.4",
+    "mockery": "^1.4.0",
+    "nock": "^3.4.0",
+    "should": "^8.2.1",
+    "supertest": "^1.1.0"
+  },
+  "dependencies": {
+    "bunyan": "^1.5.1",
+    "bunyan-prettystream": "^0.1.3",
+    "bunyan-raven": "^0.4.0",
+    "co": "4.6.0",
+    "debug": "^2.2.0",
+    "graphite-udp": "^1.0.0",
+    "intl": "^1.0.1",
+    "join-path": "^1.1.0",
+    "lodash": "4.6.0",
+    "lru-cache": "^2.7.0",
+    "os-utils": "0.0.14",
+    "raven": "^0.8.1",
+    "redis": "^2.3.1",
+    "request-promise": "^1.0.2",
+    "socket.io-client": "^1.3.7",
+    "sprintf-js": "^1.0.3",
+    "uuid": "^2.0.1"
+  }
+}

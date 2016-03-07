@@ -1,0 +1,7 @@
+--ui bdd
+--reporter list
+--timeout 6000
+--colors
+--recursive
+--require should
+--require co-mocha
