@@ -6,8 +6,10 @@ gfke-applications.
 [![npm version](https://badge.fury.io/js/gfke-support.svg)](https://badge.fury.io/js/gfke-support)
 
 [![Build Status](https://travis-ci.org/gfke/gfke-support.svg?branch=master)](https://travis-ci.org/gfke/gfke-support)
+[![Dependency Status](https://gemnasium.com/gfke/gfke-support.svg)](https://gemnasium.com/gfke/gfke-support)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/grade/b8d0e55d291c44029f4f74746aa33a27)](https://www.codacy.com/app/naxmefy/gfke-support)
+
 [![Coverage Status](https://coveralls.io/repos/github/gfke/gfke-support/badge.svg?branch=master)](https://coveralls.io/github/gfke/gfke-support?branch=master)
 
 ## Installation
