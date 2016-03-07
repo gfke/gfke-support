@@ -7,7 +7,7 @@ build:
     - script:
         name: echo execute tests with coverage
         code: |
-            npm run test:cov -- -- --silent
+            npm run test-cov -- -- --silent
     
     - script:
         name: push coverage report

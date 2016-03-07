@@ -20,7 +20,7 @@
   "bugs": "https://github.com/gfke/gfke-support/issues",
   "scripts": {
     "test": "node_modules/.bin/mocha test",
-    "test:cov": "node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha test"
+    "test-cov": "node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha test"
   },
   "devDependencies": {
     "co-mocha": "^1.1.2",
