@@ -1,6 +1,6 @@
 {
   "name": "gfke-support",
-  "version": "0.1.20",
+  "version": "0.1.21",
   "description": "Collection of services and utils for gfke applications",
   "main": "lib/index.js",
   "author": {
