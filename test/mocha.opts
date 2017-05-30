@@ -1,7 +1,5 @@
---ui bdd
---reporter list
---timeout 6000
---colors
 --recursive
+--colors
+--compilers ts:ts-node/register
 --require should
---require co-mocha
+--require test/spec_helper
