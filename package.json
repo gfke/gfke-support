@@ -1,8 +1,9 @@
 {
-  "name": "gfke-support",
+  "name": "@gfke/support",
   "version": "1.4.1",
   "description": "Collection of services and utils for gfke applications",
-  "main": "lib/index.js",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "author": {
     "name": "GFK Entertainment",
     "email": "contact.entertainment@gfk.com",
@@ -10,7 +11,7 @@
   },
   "license": "WTFPL",
   "engines": {
-    "node": ">=4.2.1"
+    "node": ">=6.9"
   },
   "repository": {
     "type": "git",
@@ -19,33 +20,62 @@
   "homepage": "https://github.com/gfke/gfke-support",
   "bugs": "https://github.com/gfke/gfke-support/issues",
   "scripts": {
-    "test": "node_modules/.bin/mocha test",
-    "test-cov": "node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha test"
+    "build": "tsc",
+    "lint": "tslint src test",
+    "lint:fix": "npm run tslint -- --fix",
+    "prepublish": "npm run build",
+    "maven": "node-java-maven",
+    "pretest": "npm run maven",
+    "test": "mocha",
+    "test:coverage": "nyc npm test"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary"
+    ],
+    "sourceMap": true,
+    "instrument": true
   },
   "devDependencies": {
-    "co-mocha": "^1.1.2",
-    "dotenv": "2.0.0",
-    "istanbul": "^0.4.2",
+    "@types/mocha": "^2.2.41",
+    "@types/should": "^8.3.0",
     "koa": "^1.1.2",
     "koa-better-body": "1.0.17",
     "mocha": "^2.3.4",
     "mockery": "^1.4.0",
     "nock": "^3.4.0",
     "should": "^8.2.1",
-    "supertest": "^2.0.0"
+    "supertest": "^2.0.0",
+    "ts-node": "^3.0.4",
+    "tslint": "^5.2.0",
+    "tslint-config-standard": "^5.0.2",
+    "typescript": "^2.3.2"
   },
   "dependencies": {
-    "bluebird": "^3.4.1",
+    "@types/bluebird": "^3.5.3",
+    "@types/debug": "0.0.29",
+    "@types/java": "^0.7.31",
+    "@types/lodash": "^4.14.64",
+    "bluebird": "^3.5.0",
     "bunyan": "^1.5.1",
     "bunyan-prettystream": "^0.1.3",
     "bunyan-raven": "^0.4.0",
     "co": "4.6.0",
-    "debug": "^2.2.0",
+    "debug": "^2.6.8",
     "graphite-udp": "^1.0.0",
     "intl": "^1.0.1",
     "join-path": "^1.1.0",
     "koa-router": "5.4.0",
-    "lodash": "4.6.1",
+    "lodash": "4.17.4",
     "lru-cache": "^2.7.0",
     "moment": "^2.10.6",
     "os-utils": "0.0.14",
