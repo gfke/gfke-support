@@ -5,12 +5,10 @@ import * as debug from 'debug'
 import * as ProxyAgent from 'https-proxy-agent'
 import * as join from 'join-path'
 
-import {parse, Url} from 'url'
+import {parse} from 'url'
 import {removeLine} from '../util/String'
 
-declare module 'https-proxy-agent' {
-    export default function (url: Url)
-}
+import Bluebird = require('bluebird')
 
 export interface IURMSocketOptions {
     url: string,
@@ -73,7 +71,7 @@ export class URMSocket {
         return this._socket
     }
 
-    emit (event: string, data: {}, onResponse?: Function, onError?: Function) {
+    emit (event: string, data: {}, onResponse?: Function, onError?: Function): Bluebird<any> {
         const stack = new Error().stack
         event = join(this.options.eventPrefix, event)
 

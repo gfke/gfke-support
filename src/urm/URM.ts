@@ -1,16 +1,14 @@
 import * as debug from 'debug'
 import * as _ from 'lodash'
-import * as rp from 'request-promise'
+import * as requestPromise from 'request-promise'
 import * as join from 'join-path'
 import {IURMSocketOptions, URMSocket} from './URMSocket'
 
-declare module 'join-path' {
-    export default function (...strings): string
-}
+import Bluebird = require('bluebird')
 
 export interface IURMOptions {
     url: string,
-    requestOptions?: rp.OptionsWithUri
+    requestOptions?: requestPromise.OptionsWithUri
     socket?: IURMSocketOptions
 }
 
@@ -55,15 +53,14 @@ export class URM {
         return this._urmSocket
     }
 
-    emit (event: string, data: {}, onResponse?: Function, onError?: Function) {
-        if (this.urmSocket) {
-            return this.urmSocket.emit(event, data, onResponse, onError)
+    emit (event: string, data: {}, onResponse?: Function, onError?: Function): Bluebird<any> {
+        if (!this.urmSocket) {
+            throw new Error('No URM Socket defined')
         }
-
-        throw new Error('No URM Socket defined')
+        return this.urmSocket.emit(event, data, onResponse, onError)
     }
 
-    query (route: string, json?: {}, headers?: {}, onResponse?: Function, onError?: Function) {
+    query (route: string, json?: {}, headers?: {}, onResponse?: Function, onError?: Function): Bluebird<any> {
         const requestOptions = _.cloneDeep(this.options.requestOptions)
         requestOptions.uri = join(this.options.url, route)
 
@@ -88,7 +85,7 @@ export class URM {
 
         this._debug('query %s %s', requestOptions.method, requestOptions.uri)
         this._debug('send %s', JSON.stringify(requestOptions.json, null, 4))
-        return rp(requestOptions)
+        return requestPromise(requestOptions)
             .catch((error: IURMErrorResponse) => {
                 if (_.isUndefined(error.message)) error.message = error.error.message
                 if (_.isUndefined(error.statusCode)) error.statusCode = 500
