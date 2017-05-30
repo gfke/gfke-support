@@ -24,8 +24,6 @@
     "lint": "tslint src test",
     "lint:fix": "npm run tslint -- --fix",
     "prepublish": "npm run build",
-    "maven": "node-java-maven",
-    "pretest": "npm run maven",
     "test": "mocha",
     "test:coverage": "nyc npm test"
   },
