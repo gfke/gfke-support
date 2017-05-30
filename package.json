@@ -48,12 +48,14 @@
   "devDependencies": {
     "@types/mocha": "^2.2.41",
     "@types/should": "^8.3.0",
+    "https-proxy-agent": "^1.0.0",
     "koa": "^1.1.2",
     "koa-better-body": "1.0.17",
     "mocha": "^2.3.4",
     "mockery": "^1.4.0",
     "nock": "^3.4.0",
     "should": "^8.2.1",
+    "socket.io-client": "^1.3.7",
     "supertest": "^2.0.0",
     "ts-node": "^3.0.4",
     "tslint": "^5.2.0",
@@ -65,6 +67,8 @@
     "@types/debug": "0.0.29",
     "@types/java": "^0.7.31",
     "@types/lodash": "^4.14.64",
+    "@types/request-promise": "^4.1.33",
+    "@types/socket.io-client": "^1.4.29",
     "bluebird": "^3.5.0",
     "bunyan": "^1.5.1",
     "bunyan-prettystream": "^0.1.3",
@@ -86,5 +90,8 @@
     "socket.io-client": "^1.3.7",
     "sprintf-js": "^1.0.3",
     "uuid": "^2.0.1"
+  },
+  "peerDependencies": {
+    "https-proxy-agent": "^1.0.0"
   }
 }
