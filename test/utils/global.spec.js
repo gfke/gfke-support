@@ -6,9 +6,8 @@ describe('Util: global', function () {
       var object = {
         info: "test"
       };
-
       this.lib.utils.global.expose(object, "TestInfoObject");
-      global.should.have.property("TestInfoObject");
+      should(global).have.property("TestInfoObject");
       global.TestInfoObject.should.be.eql(object);
     });
 
@@ -51,8 +50,8 @@ describe('Util: global', function () {
       };
 
       this.lib.utils.global.exposeMany(object);
-      global.should.have.property("exampleInfo");
-      global.should.have.property("anotherExampleInfo");
+      should(global).have.property("exampleInfo");
+      should(global).have.property("anotherExampleInfo");
 
       global.exampleInfo.should.be.eql("test");
       global.anotherExampleInfo.should.be.eql("anotherTest");
@@ -67,8 +66,8 @@ describe('Util: global', function () {
       this.lib.utils.global.exposeMany(object, function(key) {
         return key+"Test";
       });
-      global.should.have.property("exampleInfoTest");
-      global.should.have.property("anotherExampleInfoTest");
+      should(global).have.property("exampleInfoTest");
+      should(global).have.property("anotherExampleInfoTest");
 
       global.exampleInfoTest.should.be.eql("test");
       global.anotherExampleInfoTest.should.be.eql("anotherTest");
