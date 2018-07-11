@@ -1,7 +1,5 @@
 'use strict';
 
-var raven = require('raven');
-
 describe('Util: log', function () {
   describe('Method simpleLogger', function () {
     it('should instatiate pino with a stdout stream without options', function() {
