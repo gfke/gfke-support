@@ -1,5 +1,5 @@
 {
-  "name": "gfke-support",
+  "name": "@gfke/gfke-support",
   "version": "2.0.0",
   "description": "Collection of services and utils for gfke applications",
   "main": "lib/index.js",
