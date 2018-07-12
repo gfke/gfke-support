@@ -39,7 +39,6 @@
     "co": "4.6.0",
     "debug": "^3.1.0",
     "graphite-udp": "^1.0.0",
-    "intl": "^1.0.1",
     "join-path": "^1.1.0",
     "koa-router": "5.4.0",
     "lodash": "4.17.10",
