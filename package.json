@@ -1,6 +1,6 @@
 {
   "name": "@gfke/gfke-support",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Collection of services and utils for gfke applications",
   "main": "lib/index.js",
   "author": {
@@ -10,7 +10,7 @@
   },
   "license": "WTFPL",
   "engines": {
-    "node": ">=4.2.2"
+    "node": ">=4.2.1"
   },
   "repository": {
     "type": "git",
