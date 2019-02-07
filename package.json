@@ -10,7 +10,7 @@
   },
   "license": "WTFPL",
   "engines": {
-    "node": ">=4.2.1"
+    "node": ">=4.2.2"
   },
   "repository": {
     "type": "git",
